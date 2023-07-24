@@ -2,7 +2,7 @@
 
 *setting project*
 **.env file**
-```json
+```js
 PORT = < server port >
 MONGO = < mongoDB url >
 TOKEN_MAIN = < token key up to you for admin >
@@ -23,7 +23,7 @@ exp_token = < token expire date 1m 1h 1d 1w 1m up to you >
 **/guest** สำหรับบุคลทั่วไป สามารถอ่นโพสต์ได้
 - **/guest** < method : **GET** > 
 สำหรับ **guest** เข้ามาอ่านทุกโพสต์ 
-```json
+```js
 body : {}
 headers : {}
 ```
@@ -31,7 +31,7 @@ headers : {}
 
 - **/guest/:id** < method : **GET** > 
 สำหรับ **guest** เข้ามาอ่านโพสต์ 
-```json
+```js
 body : {}
 headers : {}
 ```
@@ -39,7 +39,7 @@ headers : {}
 
 - **/guest** < method : **POST** >
 สำหรับ **admin** เพิ่มโพสต์ 
-```json
+```js
 body : { author, title, cover, tag, content }
 headers : {access-token : < admin token >}
 ```
@@ -47,7 +47,7 @@ headers : {access-token : < admin token >}
 
 - **/guest** < method : **PUT** >
 สำหรับ **admin** แก้ไขโพสต์
-```json
+```js
 body : { author, title, cover, tag, content }
 headers : {access-token : < admin token >}
 ```
@@ -55,7 +55,7 @@ headers : {access-token : < admin token >}
 
 - **/guest** < method : **DELETE** >
 สำหรับ **admin** ลบโพสต์
-```json
+```js
 body : { author, title, cover, tag, content }
 headers : {access-token : < admin token >}
 ```
@@ -65,7 +65,7 @@ headers : {access-token : < admin token >}
 **/blog** สำหรับสมาชิกเท่านั้นที่อ่านได้
 - **/blog** < method : **GET** > 
 สำหรับ **member** เข้ามาอ่านทุกโพสต์ 
-```json
+```js
 body : {}
 headers : {}
 ```
@@ -73,7 +73,7 @@ headers : {}
 
 - **/blog/:id** < method : **GET** > 
 สำหรับ **member** เข้ามาอ่านโพสต์ 
-```json
+```js
 body : {}
 headers : {}
 ```
@@ -81,7 +81,7 @@ headers : {}
 
 - **/blog** < method : **POST** >
 สำหรับ **admin** เพิ่มโพสต์ 
-```json
+```js
 body : { author, title, cover, tag, content }
 headers : {access-token : < admin token >}
 ```
@@ -89,7 +89,7 @@ headers : {access-token : < admin token >}
 
 - **/blog** < method : **PUT** >
 สำหรับ **admin** แก้ไขโพสต์
-```json
+```js
 body : { author, title, cover, tag, content }
 headers : {access-token : < admin token >}
 ```
@@ -97,7 +97,7 @@ headers : {access-token : < admin token >}
 
 - **/blog** < method : **DELETE** >
 สำหรับ **admin** ลบโพสต์
-```json
+```js
 body : { author, title, cover, tag, content }
 headers : {access-token : < admin token >}
 ```
@@ -107,12 +107,12 @@ headers : {access-token : < admin token >}
 **/member** สำหรับลงทะเบียนและลงชื่อเข้าใช้
 - **/member/register** 
 สำหรับลงทะเบียน **member** ใหม่
-```json
+```js
 body : {userName, email, password}
 ```
 - **/member/login** 
 สำหรับลงชื่อเข้าสู่ระบบ
-```json
+```js
 body : {email, password}
 ```
  ---
@@ -121,13 +121,13 @@ body : {email, password}
 **/admin** สำหรับเพิ่มแอดมิน
 - **/admin/register** 
 สำหรับลงทะเบียน **admin** ใหม่
-```json
+```js
 body : {admin, password}
 headers : {access-token : < admin token >}
 ```
 - **/admin/login** 
 สำหรับลงชื่อเข้าสู่ระบบ
-```json
+```js
 body : {admin, password}
 ```
 ---
