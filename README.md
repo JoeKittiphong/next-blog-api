@@ -1,4 +1,5 @@
-## API
+# Next-blog-api #
+จุดประสงค็คือทำตัวจัดการเว็บ blog ที่จะจัดการข้อมูลทุกอย่างกับ MongoDB โดยภาพทั้งหมดจะเก็บไว้ที่ Google drive จะทำการเก็บแค่ image url ไว้ที่ MongoDB โดยจะเก็บไว้ในรูปแบบของไฟล์ Markdown เพื่อที่จะให้หน้าบ้านที่เป็น React หรือ NextJS นำไปใช้ต่อได้ง่าย ๆ
 
 *setting project*
 **.env file**
@@ -19,6 +20,8 @@ exp_token = < token expire date 1m 1h 1d 1w 1m up to you >
 "jsonwebtoken": "^9.0.1",
 "mongoose": "^7.4.0"
 ```
+---
+## API
 ---
 **/guest** สำหรับบุคลทั่วไป สามารถอ่นโพสต์ได้
 - **/guest** < method : **GET** > 
