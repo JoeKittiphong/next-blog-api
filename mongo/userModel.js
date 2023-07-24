@@ -8,7 +8,7 @@ const userSchema = mongoose.Schema({
 }, {
     timestamps: true
 }, {
-    collection: 'Blog'
+    collection: 'user'
 })
 
 const userModel = mongoose.model("user", userSchema)

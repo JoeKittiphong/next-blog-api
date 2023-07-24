@@ -10,8 +10,8 @@ const postSchema = mongoose.Schema({
 }, {
     timestamps: true
 }, {
-    collection: 'blog'
+    collection: 'guest'
 })
 
-const postModel = mongoose.model("bloger", postSchema)
+const postModel = mongoose.model("guest", postSchema)
 module.exports = postModel
