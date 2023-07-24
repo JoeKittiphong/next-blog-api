@@ -16,6 +16,9 @@ app.use("/blog", route)
 app.use("/member", user)
 app.use("/guest", guest)
 app.use("/admin", admin)
+app.get("/",(req,res)=>{
+    res.send("api ok")
+})
 
 mongoose.Promise
 try {
