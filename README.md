@@ -1,5 +1,25 @@
 ## API
 
+*setting project*
+**.env file**
+```json
+PORT = < server port >
+MONGO = < mongoDB url >
+TOKEN_MAIN = < token key up to you for admin >
+TOKEN_KEY = < token key up to you for member >
+exp_token = < token expire date 1m 1h 1d 1w 1m up to you >
+```
+---
+**dependencies**
+```json
+"bcrypt": "^5.1.0",
+"cors": "^2.8.5",
+"dotenv": "^16.3.1",
+"express": "^4.18.2",
+"jsonwebtoken": "^9.0.1",
+"mongoose": "^7.4.0"
+```
+---
 **/guest** สำหรับบุคลทั่วไป สามารถอ่นโพสต์ได้
 - **/guest** < method : **GET** > 
 สำหรับ **guest** เข้ามาอ่านทุกโพสต์ 
@@ -7,7 +27,7 @@
 body : {}
 headers : {}
 ```
----
+
 
 - **/guest/:id** < method : **GET** > 
 สำหรับ **guest** เข้ามาอ่านโพสต์ 
@@ -15,7 +35,7 @@ headers : {}
 body : {}
 headers : {}
 ```
----
+
 
 - **/guest** < method : **POST** >
 สำหรับ **admin** เพิ่มโพสต์ 
@@ -23,7 +43,7 @@ headers : {}
 body : { author, title, cover, tag, content }
 headers : {access-token : < admin token >}
 ```
----
+
 
 - **/guest** < method : **PUT** >
 สำหรับ **admin** แก้ไขโพสต์
@@ -31,7 +51,7 @@ headers : {access-token : < admin token >}
 body : { author, title, cover, tag, content }
 headers : {access-token : < admin token >}
 ```
----
+
 
 - **/guest** < method : **DELETE** >
 สำหรับ **admin** ลบโพสต์
@@ -49,7 +69,7 @@ headers : {access-token : < admin token >}
 body : {}
 headers : {}
 ```
----
+
 
 - **/blog/:id** < method : **GET** > 
 สำหรับ **member** เข้ามาอ่านโพสต์ 
@@ -57,7 +77,7 @@ headers : {}
 body : {}
 headers : {}
 ```
----
+
 
 - **/blog** < method : **POST** >
 สำหรับ **admin** เพิ่มโพสต์ 
@@ -65,7 +85,7 @@ headers : {}
 body : { author, title, cover, tag, content }
 headers : {access-token : < admin token >}
 ```
----
+
 
 - **/blog** < method : **PUT** >
 สำหรับ **admin** แก้ไขโพสต์
@@ -73,7 +93,7 @@ headers : {access-token : < admin token >}
 body : { author, title, cover, tag, content }
 headers : {access-token : < admin token >}
 ```
----
+
 
 - **/blog** < method : **DELETE** >
 สำหรับ **admin** ลบโพสต์
@@ -95,6 +115,7 @@ body : {userName, email, password}
 ```json
 body : {email, password}
 ```
+ ---
  ---
 
 **/admin** สำหรับเพิ่มแอดมิน
