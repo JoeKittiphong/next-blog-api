@@ -84,7 +84,7 @@ headers : {access-token : < admin token >}
 ---
 ---
 
-**/member"** สำหรับลงทะเบียนและลงชื่อเข้าใช้
+**/member** สำหรับลงทะเบียนและลงชื่อเข้าใช้
 - **/member/register** 
 สำหรับลงทะเบียน **member** ใหม่
 ```json
@@ -97,7 +97,7 @@ body : {email, password}
 ```
  ---
 
-**/admin"** สำหรับเพิ่มแอดมิน
+**/admin** สำหรับเพิ่มแอดมิน
 - **/admin/register** 
 สำหรับลงทะเบียน **admin** ใหม่
 ```json
